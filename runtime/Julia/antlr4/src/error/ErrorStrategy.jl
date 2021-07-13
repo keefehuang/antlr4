@@ -772,6 +772,3 @@ end
 function recoverInline(des::BailErrorStrategy, recognizer::AbstractParser)
     recover(des, recognizer, InputMismatchException(recognizer))
 end
-
-# Make sure we don't attempt to recover from problems in subrules.#
-function sync(::DefaultErrorStrategy, ::AbstractParser) end

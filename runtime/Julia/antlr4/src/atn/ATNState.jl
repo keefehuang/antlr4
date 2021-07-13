@@ -122,10 +122,6 @@ function isNonGreedyExitState(::ATNStateVariables)
     return false
 end
 
-function Base.string(var::ATNStateVariables)
-    return string(var.atn)
-end
-
 function addTransition!(var::ATNStateVariables, trans::Transition, index::Int=-1)
     if length(var.transitions) == 0
         var.epsilonOnlyTransitions = trans.isEpsilon
@@ -157,10 +153,6 @@ Base.:(==)(::T, ::S) where {T,S<:ATNState} = false
 
 function onlyHasEpsilonTransitions(state::ATNState)
     return onlyHasEpsilonTransitions(state.atnvar)
-end
-
-function Base.string(state::ATNState)
-    return string(state.atnvar)
 end
 
 mutable struct BasicState <: ATNState
