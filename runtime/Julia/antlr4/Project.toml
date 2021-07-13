@@ -4,5 +4,6 @@ authors = ["Qunsheng Huang <keefe.huang@tum.de>"]
 version = "0.1.0"
 
 [deps]
+Logging = "56ddb016-857b-54e1-b83d-db4d58db5568"
 SuperEnum = "5c958174-e7d9-5990-9618-4567de4ba542"
 UUIDs = "cf7118a7-6976-5b1a-9a39-7adc72f591a4"
